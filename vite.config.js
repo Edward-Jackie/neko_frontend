@@ -10,7 +10,7 @@ export default defineConfig({
   // ...
   plugins: [
     // ...
-    vue(),
+    vue({}),
     AutoImport({
       resolvers: [ElementPlusResolver()],
     }),
@@ -18,4 +18,9 @@ export default defineConfig({
       resolvers: [ElementPlusResolver()],
     }),
   ],
+
+  server: {
+    host: '0.0.0.0',
+    port: 8080,
+  }
 })
